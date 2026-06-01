@@ -9,16 +9,10 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: #f5f7fa;
-  }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #f5f7fa; }
 
   body {
-    width: 1920px;
-    height: 1080px;
+    width: 1920px; height: 1080px;
     overflow: hidden;
     transform-origin: top left;
     font-family: 'Noto Sans SC', 'Lato', sans-serif;
@@ -26,21 +20,16 @@
     color: #1a2a3a;
   }
 
-  /* ─── BACKGROUND ─── */
   .bg {
     position: absolute; inset: 0;
     background: linear-gradient(150deg, #eef4fb 0%, #f7f9fc 50%, #edf6f4 100%);
     z-index: 0;
   }
-  /* Subtle dot pattern */
   .bg::after {
-    content: '';
-    position: absolute; inset: 0;
+    content: ''; position: absolute; inset: 0;
     background-image: radial-gradient(circle, rgba(30,111,217,0.07) 1.5px, transparent 1.5px);
     background-size: 28px 28px;
   }
-
-  /* Top gradient bar */
   .top-bar {
     position: absolute; top: 0; left: 0; right: 0; height: 6px; z-index: 20;
     background: linear-gradient(90deg, #1e6fd9, #2eaadc, #16b896, #2eaadc, #1e6fd9);
@@ -51,96 +40,87 @@
     position: relative; z-index: 1;
     width: 1920px; height: 1080px;
     display: grid;
-    grid-template-rows: 130px 1fr 36px;
+    grid-template-rows: 118px 1fr 34px;
     padding-top: 6px;
   }
 
-  /* ═══════════════════════════════
-     HEADER
-  ═══════════════════════════════ */
+  /* ═══ HEADER ═══ */
   .header {
     display: flex; align-items: center;
-    padding: 0 48px;
+    padding: 0 40px;
     background: #fff;
     border-bottom: 2px solid #e0eaf5;
     box-shadow: 0 2px 12px rgba(30,111,217,0.08);
-    gap: 28px;
+    gap: 24px;
   }
   .header-icon {
-    width: 66px; height: 66px; border-radius: 16px; flex-shrink: 0;
+    width: 60px; height: 60px; border-radius: 14px; flex-shrink: 0;
     background: linear-gradient(135deg, #1e6fd9 0%, #16b896 100%);
     display: flex; align-items: center; justify-content: center;
-    font-size: 30px;
+    font-size: 28px;
     box-shadow: 0 4px 16px rgba(30,111,217,0.25);
   }
   .header-main { flex: 1; }
   .title-en {
     font-family: 'Lato', sans-serif;
-    font-size: 14.5px; font-weight: 400; font-style: italic;
+    font-size: 14px; font-weight: 400; font-style: italic;
     color: #4a7ab0; letter-spacing: 0.02em; line-height: 1.4;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .title-zh {
     font-family: 'Noto Serif SC', serif;
-    font-size: 28px; font-weight: 700;
+    font-size: 27px; font-weight: 700;
     color: #0f2744; letter-spacing: 0.03em; line-height: 1.3;
   }
-  /* Journal info row */
   .journal-row {
-    margin-top: 6px;
+    margin-top: 5px;
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
   .journal-name-txt {
     font-family: 'Lato', sans-serif;
-    font-size: 13px; font-weight: 700; color: #1e6fd9;
-    letter-spacing: 0.04em;
+    font-size: 13px; font-weight: 700; color: #1e6fd9; letter-spacing: 0.04em;
   }
   .j-sep { color: #aac0d8; font-size: 13px; }
-  .j-meta { font-size: 12.5px; color: #5a7a9a; }
+  .j-meta { font-size: 12px; color: #5a7a9a; }
   .q1-pill {
     background: linear-gradient(135deg, #1e6fd9, #16b896);
     color: #fff; font-size: 11px; font-weight: 700;
     padding: 2px 10px; border-radius: 20px; letter-spacing: 0.06em;
   }
   .doi-txt { font-size: 11px; color: #8aa4bc; font-family: 'Lato', monospace; }
-
-  /* Header right: authors */
-  .header-authors {
-    text-align: right; flex-shrink: 0;
-  }
+  .header-authors { text-align: right; flex-shrink: 0; }
   .author-name { font-size: 13px; font-weight: 600; color: #2a4a6a; }
   .author-inst { font-size: 11px; color: #7090a8; margin-top: 3px; line-height: 1.5; }
 
-  /* ═══════════════════════════════
-     BODY
-  ═══════════════════════════════ */
+  /* ═══ BODY ═══ */
   .body {
     display: grid;
-    grid-template-columns: 350px 1fr 350px;
-    gap: 14px;
-    padding: 14px 20px 10px;
+    grid-template-columns: 1fr 1.35fr 1fr;
+    gap: 10px;
+    padding: 10px 16px 8px;
   }
-  .col { display: flex; flex-direction: column; gap: 12px; }
+  .col { display: flex; flex-direction: column; gap: 8px; }
 
   /* ─── Card ─── */
   .card {
     background: #fff;
-    border-radius: 12px;
-    padding: 14px 16px;
-    box-shadow: 0 1px 6px rgba(30,80,160,0.07), 0 4px 16px rgba(30,80,160,0.04);
+    border-radius: 10px;
+    padding: 11px 14px;
+    box-shadow: 0 1px 6px rgba(30,80,160,0.07), 0 4px 14px rgba(30,80,160,0.04);
     border: 1px solid rgba(30,111,217,0.08);
     flex: 1;
   }
-  .card.c-blue  { border-top: 3px solid #1e6fd9; }
-  .card.c-teal  { border-top: 3px solid #16b896; }
-  .card.c-gold  { border-top: 3px solid #f59e0b; }
-  .card.c-purple{ border-top: 3px solid #7c3aed; }
-  .card.c-sky   { border-top: 3px solid #0ea5e9; }
+  .card.c-blue   { border-top: 3px solid #1e6fd9; }
+  .card.c-teal   { border-top: 3px solid #16b896; }
+  .card.c-gold   { border-top: 3px solid #f59e0b; }
+  .card.c-purple { border-top: 3px solid #7c3aed; }
+  .card.c-sky    { border-top: 3px solid #0ea5e9; }
+  .card.c-rose   { border-top: 3px solid #e11d48; }
 
   .card-title {
-    font-size: 10.5px; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    margin-bottom: 10px;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.10em; text-transform: uppercase;
+    margin-bottom: 8px;
     display: flex; align-items: center; gap: 6px;
   }
   .ct-blue   { color: #1e6fd9; }
@@ -148,63 +128,64 @@
   .ct-gold   { color: #d97706; }
   .ct-purple { color: #7c3aed; }
   .ct-sky    { color: #0369a1; }
+  .ct-rose   { color: #e11d48; }
 
-  /* Divider line under card title */
-  .title-line {
-    height: 1px;
-    background: linear-gradient(90deg, currentColor, transparent);
-    opacity: 0.2;
-    margin-bottom: 10px;
-    margin-top: -6px;
-  }
-
-  p, li { font-size: 12px; line-height: 1.72; color: #2a3e52; }
+  p, li { font-size: 13px; line-height: 1.68; color: #2a3e52; }
   ul { list-style: none; padding: 0; }
-  ul li { padding-left: 14px; position: relative; }
+  ul li { padding-left: 15px; position: relative; margin-bottom: 2px; }
   ul li::before { content: '▸'; position: absolute; left: 0; font-size: 10px; color: #1e6fd9; top: 3px; }
 
   /* Stats */
-  .stats-row { display: flex; gap: 8px; }
+  .stats-row { display: flex; gap: 7px; }
   .stat-box {
-    flex: 1; border-radius: 10px; padding: 10px 6px;
+    flex: 1; border-radius: 9px; padding: 9px 5px;
     text-align: center;
     background: linear-gradient(135deg, #eef4ff, #f0fbf8);
     border: 1px solid #d0e4f8;
   }
   .stat-num {
     font-family: 'Lato', sans-serif;
-    font-size: 26px; font-weight: 900; color: #1e6fd9; line-height: 1;
+    font-size: 28px; font-weight: 900; color: #1e6fd9; line-height: 1;
   }
-  .stat-label { font-size: 10px; color: #5a7a9a; margin-top: 3px; line-height: 1.3; }
+  .stat-label { font-size: 11px; color: #5a7a9a; margin-top: 3px; line-height: 1.3; }
 
   /* Stakeholder cards */
   .sh-row { display: flex; gap: 7px; margin-top: 6px; }
-  .sh-box {
-    flex: 1; border-radius: 10px; padding: 9px 6px; text-align: center;
-  }
+  .sh-box { flex: 1; border-radius: 9px; padding: 9px 6px; text-align: center; }
   .sh-box.pl { background: #eff6ff; border: 1px solid #bfdbfe; }
   .sh-box.re { background: #f0fdf9; border: 1px solid #a7f3d0; }
   .sh-box.in { background: #fffbeb; border: 1px solid #fde68a; }
   .sh-icon { font-size: 20px; margin-bottom: 4px; display: block; }
-  .sh-label { font-size: 11.5px; font-weight: 700; }
-  .sh-sub { font-size: 10px; color: #6a8a9a; margin-top: 2px; line-height: 1.35; }
+  .sh-label { font-size: 12px; font-weight: 700; }
+  .sh-sub { font-size: 10.5px; color: #6a8a9a; margin-top: 2px; line-height: 1.35; }
+
+  /* Research questions */
+  .rq-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    padding: 7px 10px; border-radius: 8px; margin-bottom: 6px;
+    background: #f0f6ff; border-left: 3px solid #1e6fd9;
+  }
+  .rq-num {
+    font-size: 13px; font-weight: 900; color: #1e6fd9; flex-shrink: 0; min-width: 18px;
+  }
+  .rq-text { font-size: 12.5px; color: #1e3a5a; line-height: 1.55; }
 
   /* Method compare */
-  .mc-row { display: flex; gap: 8px; margin-top: 8px; align-items: stretch; }
+  .mc-row { display: flex; gap: 7px; margin-top: 7px; align-items: stretch; }
   .mc-box { flex: 1; border-radius: 9px; padding: 9px 10px; }
   .mc-box.old { background: #fff5f5; border: 1px solid #fecaca; }
   .mc-box.new { background: #f0fdf9; border: 1px solid #6ee7b7; }
-  .mc-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.06em; margin-bottom: 5px; }
-  .mc-items { font-size: 10.5px; color: #3a5a6a; line-height: 1.7; }
+  .mc-tag { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; margin-bottom: 5px; }
+  .mc-items { font-size: 11px; color: #3a5a6a; line-height: 1.65; }
   .mc-arrow { display: flex; align-items: center; color: #1e6fd9; font-size: 22px; font-weight: 900; }
 
   /* Logic concept boxes */
-  .logic-row { display: flex; gap: 8px; margin-top: 8px; }
-  .logic-box { flex: 1; border-radius: 8px; padding: 9px 10px; }
+  .logic-row { display: flex; gap: 7px; margin-top: 7px; }
+  .logic-box { flex: 1; border-radius: 8px; padding: 8px 10px; }
   .logic-box.conj { background: #eff6ff; border: 1px solid #93c5fd; }
   .logic-box.disj { background: #f0fdf9; border: 1px solid #6ee7b7; }
-  .logic-title { font-size: 11px; font-weight: 700; margin-bottom: 3px; }
-  .logic-text { font-size: 10.5px; color: #3a5a6a; line-height: 1.5; }
+  .logic-title { font-size: 11.5px; font-weight: 700; margin-bottom: 3px; }
+  .logic-text { font-size: 11px; color: #3a5a6a; line-height: 1.5; }
 
   /* Dim boxes */
   .dim-row { display: flex; gap: 7px; }
@@ -213,20 +194,20 @@
   .dim-box.eco { background: #fffbeb; border: 1px solid #fde68a; }
   .dim-box.soc { background: #faf5ff; border: 1px solid #d8b4fe; }
   .dim-icon { font-size: 18px; }
-  .dim-label { font-size: 10.5px; font-weight: 700; margin-top: 3px; }
-  .dim-sub { font-size: 9.5px; color: #6a8a9a; margin-top: 2px; line-height: 1.35; }
+  .dim-label { font-size: 11px; font-weight: 700; margin-top: 3px; }
+  .dim-sub { font-size: 10.5px; color: #6a8a9a; margin-top: 2px; line-height: 1.35; }
 
   /* Flow */
-  .flow { display: flex; align-items: center; gap: 4px; margin-top: 8px; }
+  .flow { display: flex; align-items: center; gap: 4px; margin-top: 7px; }
   .flow-step {
     flex: 1; background: #f0f6ff; border: 1px solid #bfdbfe;
     border-radius: 7px; padding: 7px 4px;
-    text-align: center; font-size: 10.5px; color: #1e40af; line-height: 1.4; font-weight: 500;
+    text-align: center; font-size: 11px; color: #1e40af; line-height: 1.4; font-weight: 500;
   }
   .flow-arrow { color: #60a5fa; font-size: 16px; flex-shrink: 0; }
 
   /* Policy list */
-  .policy-list { display: flex; flex-direction: column; gap: 8px; }
+  .policy-list { display: flex; flex-direction: column; gap: 7px; }
   .policy-item { display: flex; align-items: flex-start; gap: 9px; }
   .policy-num {
     width: 22px; height: 22px; flex-shrink: 0;
@@ -234,16 +215,16 @@
     border-radius: 6px; display: flex; align-items: center; justify-content: center;
     font-size: 11px; font-weight: 800; color: #fff;
   }
-  .policy-text { font-size: 12px; color: #1e3a5a; line-height: 1.55; padding-top: 2px; }
+  .policy-text { font-size: 12.5px; color: #1e3a5a; line-height: 1.55; padding-top: 1px; }
 
   /* Highlights */
   .highlight-item {
     display: flex; align-items: flex-start; gap: 8px;
-    padding: 7px 10px; border-radius: 8px; margin-bottom: 7px;
+    padding: 7px 10px; border-radius: 8px; margin-bottom: 6px;
     background: #f8faff; border-left: 3px solid #1e6fd9;
   }
   .hi-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
-  .hi-text { font-size: 11.5px; color: #1e3a5a; line-height: 1.55; }
+  .hi-text { font-size: 12px; color: #1e3a5a; line-height: 1.55; }
 
   /* Thinking */
   .think-item {
@@ -252,34 +233,32 @@
     background: #faf5ff; border-left: 3px solid #7c3aed;
   }
   .think-q { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
-  .think-text { font-size: 11.5px; color: #2d1e5a; line-height: 1.55; }
+  .think-text { font-size: 12px; color: #2d1e5a; line-height: 1.55; }
 
   /* Findings */
-  .find-item {
-    display: flex; align-items: flex-start; gap: 9px; margin-bottom: 7px;
-  }
+  .find-item { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 6px; }
   .find-dot {
     width: 9px; height: 9px; border-radius: 50%;
     background: #16b896; flex-shrink: 0; margin-top: 4px;
   }
-  .find-text { font-size: 12px; color: #1a3040; line-height: 1.6; }
+  .find-text { font-size: 12.5px; color: #1a3040; line-height: 1.6; }
 
   /* Quote box */
   .quote-box {
     background: linear-gradient(135deg, #eff6ff, #f0fdf9);
-    border-radius: 9px; padding: 10px 14px;
+    border-radius: 9px; padding: 9px 13px;
     border-left: 3px solid #1e6fd9;
     font-size: 12.5px; color: #1e3a5a; font-style: italic; line-height: 1.6;
-    margin-top: 8px;
+    margin-top: 7px;
   }
 
   /* ─── FOOTER ─── */
   .footer {
     display: flex; align-items: center;
-    padding: 0 28px; gap: 32px;
+    padding: 0 24px; gap: 28px;
     background: #fff;
     border-top: 1px solid #e0eaf5;
-    font-size: 10px; color: #8aa4bc;
+    font-size: 10.5px; color: #8aa4bc;
   }
   .footer span { display: flex; align-items: center; gap: 5px; }
   .footer span b { color: #4a7ab0; }
@@ -333,6 +312,22 @@
         </div>
       </div>
 
+      <div class="card c-rose" style="flex:0 0 auto">
+        <div class="card-title ct-rose">❓ 核心研究问题</div>
+        <div class="rq-item">
+          <div class="rq-num">Q1</div>
+          <div class="rq-text">如何将不同利益相关者的主观偏好<b>量化</b>并纳入统一决策框架？</div>
+        </div>
+        <div class="rq-item">
+          <div class="rq-num">Q2</div>
+          <div class="rq-text">偏好差异如何影响<b>社区改造的优先排序</b>结果？</div>
+        </div>
+        <div class="rq-item" style="margin-bottom:0">
+          <div class="rq-num">Q3</div>
+          <div class="rq-text">该框架是否具有<b>可迁移性</b>，能否推广至其他超大城市？</div>
+        </div>
+      </div>
+
       <div class="card" style="flex:0 0 auto">
         <div class="card-title ct-sky">📊 研究规模</div>
         <div class="stats-row">
@@ -349,7 +344,7 @@
             <div class="stat-label">利益相关者</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num" style="font-size:22px;color:#16b896">160</div>
+            <div class="stat-num" style="font-size:24px;color:#16b896">160</div>
             <div class="stat-label">研究面积 km²</div>
           </div>
         </div>
@@ -374,7 +369,7 @@
             <div class="sh-sub">经济回报<br>与效率</div>
           </div>
         </div>
-        <p style="margin-top:9px;color:#2a4a5a;font-size:11.5px">三类主体偏好存在<b style="color:#d97706">显著差异</b>，单一评价标准无法全面体现多方诉求，本研究将三者纳入统一量化框架。</p>
+        <p style="margin-top:8px;color:#2a4a5a;font-size:12.5px">三类主体偏好存在<b style="color:#d97706">显著差异</b>，单一评价标准无法全面体现多方诉求，本研究将三者纳入统一量化框架，通过85份偏好问卷获取权重数据。</p>
       </div>
 
     </div>
@@ -388,9 +383,8 @@
           <div class="mc-box old">
             <div class="mc-tag" style="color:#dc2626">传统方法</div>
             <div class="mc-items">
-              ✗ AHP / MCE<br>
-              ✗ 指标多则权重衰减<br>
-              ✗ 线性聚合，逻辑简化<br>
+              ✗ AHP / MCE — 指标多则权重衰减<br>
+              ✗ 线性聚合，无法表达逻辑关系<br>
               ✗ 难以体现偏好异质性
             </div>
           </div>
@@ -398,10 +392,9 @@
           <div class="mc-box new">
             <div class="mc-tag" style="color:#059669">LSP 方法</div>
             <div class="mc-items">
-              ✓ 非线性逻辑聚合<br>
+              ✓ 非线性逻辑聚合运算<br>
               ✓ 支持大规模指标体系<br>
-              ✓ 同时性 + 可替代性<br>
-              ✓ 精准刻画决策偏好
+              ✓ 精准刻画同时性与可替代性
             </div>
           </div>
         </div>
@@ -418,7 +411,7 @@
       </div>
 
       <div class="card" style="flex:0 0 auto">
-        <div class="card-title ct-teal">🌐 三维评估框架</div>
+        <div class="card-title ct-teal">🌐 三维评估框架（13要素·27指标）</div>
         <div class="dim-row">
           <div class="dim-box env">
             <div class="dim-icon">🌿</div>
@@ -436,7 +429,7 @@
             <div class="dim-sub">居民需求 · 公共服务<br>交通便利 · 更新效率</div>
           </div>
         </div>
-        <p style="margin-top:7px;font-size:11px;color:#5a7a9a">↳ 13个评估要素，27个量化指标，数据来源：安居客 · 百度地图 · 北京统计年鉴（2021）</p>
+        <p style="margin-top:6px;font-size:11.5px;color:#5a7a9a">↳ 数据来源：安居客 · 百度地图 · 北京统计年鉴（2021）· 百度街景（实地验证）</p>
       </div>
 
       <div class="card" style="flex:0 0 auto">
@@ -460,19 +453,19 @@
         <div class="card-title ct-teal">📌 主要发现</div>
         <div class="find-item">
           <div class="find-dot"></div>
-          <div class="find-text">三类利益相关者偏好存在<b>显著差异</b>，揭示单一决策标准的根本局限</div>
+          <div class="find-text">三类利益相关者偏好存在<b>显著差异</b>，揭示单一决策标准的根本局限性</div>
         </div>
         <div class="find-item">
           <div class="find-dot" style="background:#1e6fd9"></div>
-          <div class="find-text">不同情境（单决策 vs 多决策）下，社区适宜性排序呈现<b>相对稳定性</b></div>
+          <div class="find-text">不同情境（单决策者 vs 多决策者）下，社区适宜性排序呈现<b>相对稳定性</b></div>
         </div>
         <div class="find-item">
           <div class="find-dot" style="background:#f59e0b"></div>
-          <div class="find-text">百度街景实地验证确认评价结果与现实需求<b>高度吻合</b></div>
+          <div class="find-text">百度街景实地验证确认评价结果与现实需求<b>高度吻合</b>，模型可信度高</div>
         </div>
         <div class="find-item" style="margin-bottom:0">
           <div class="find-dot" style="background:#7c3aed"></div>
-          <div class="find-text">系统具备<b>地域迁移性</b>，参数可调，适用于其他超大城市</div>
+          <div class="find-text">系统具备<b>地域迁移性</b>，参数可灵活调整，适用于其他超大城市场景</div>
         </div>
       </div>
 
@@ -486,19 +479,19 @@
         <div class="policy-list">
           <div class="policy-item">
             <div class="policy-num">01</div>
-            <div class="policy-text"><b style="color:#1e6fd9">高适宜性</b>社区可直接实施改造，优先提升整体效率</div>
+            <div class="policy-text"><b style="color:#1e6fd9">高适宜性</b>社区可直接实施改造，优先提升整体改造效率</div>
           </div>
           <div class="policy-item">
             <div class="policy-num">02</div>
-            <div class="policy-text"><b style="color:#d97706">中适宜性</b>社区需充分多方协商，切实保障公平性</div>
+            <div class="policy-text"><b style="color:#d97706">中适宜性</b>社区需充分开展多方协商，切实保障改造公平性</div>
           </div>
           <div class="policy-item">
             <div class="policy-num">03</div>
-            <div class="policy-text"><b style="color:#059669">资金充足</b>时优先考虑居民偏好，以公平性为导向</div>
+            <div class="policy-text"><b style="color:#059669">资金充足</b>时优先考虑居民偏好，以公平性与居民满意度为导向</div>
           </div>
           <div class="policy-item">
             <div class="policy-num">04</div>
-            <div class="policy-text"><b style="color:#7c3aed">资金受限</b>时优先考虑投资者偏好，以效率性为导向</div>
+            <div class="policy-text"><b style="color:#7c3aed">资金受限</b>时优先考虑投资者偏好，以效率性与经济回报为导向</div>
           </div>
         </div>
       </div>
@@ -507,7 +500,7 @@
         <div class="card-title ct-blue">✨ 论文亮点</div>
         <div class="highlight-item">
           <span class="hi-icon">🔬</span>
-          <div class="hi-text">LSP方法在城市更新优先排序中的<b>首次应用</b>，填补理论空白</div>
+          <div class="hi-text">LSP方法在城市更新优先排序中的<b>首次应用</b>，填补方法论空白</div>
         </div>
         <div class="highlight-item">
           <span class="hi-icon">🧮</span>
@@ -519,7 +512,7 @@
         </div>
         <div class="highlight-item" style="margin-bottom:0">
           <span class="hi-icon">🤝</span>
-          <div class="hi-text">体现"<b>共建共治共享</b>"现代社会治理理念，回应时代需求</div>
+          <div class="hi-text">体现"<b>共建共治共享</b>"现代社会治理理念，具有重要政策价值</div>
         </div>
       </div>
 
@@ -527,15 +520,15 @@
         <div class="card-title ct-purple">💭 引发思考</div>
         <div class="think-item">
           <div class="think-q">🤔</div>
-          <div class="think-text"><b>85份问卷</b>能否代表海量利益相关者的真实偏好？主观赋权如何客观化？</div>
+          <div class="think-text"><b>85份问卷</b>能否代表海量利益相关者的真实偏好？主观赋权如何进一步客观化？</div>
         </div>
         <div class="think-item">
           <div class="think-q">🔄</div>
-          <div class="think-text">利益相关者偏好<b>动态演变</b>，静态模型如何持续应对变化中的城市需求？</div>
+          <div class="think-text">利益相关者偏好会<b>动态演变</b>，静态模型如何持续应对变化中的城市需求？</div>
         </div>
         <div class="think-item">
           <div class="think-q">🌐</div>
-          <div class="think-text">模型迁移到其他城市时，<b>本地化参数</b>如何调整？文化差异如何影响"同时性"权重？</div>
+          <div class="think-text">模型迁移到其他城市时，<b>本地化参数</b>如何调整？文化差异如何影响偏好权重？</div>
         </div>
         <div class="think-item" style="margin-bottom:0">
           <div class="think-q">⚖️</div>
@@ -564,7 +557,6 @@
     var scale = Math.min(scaleX, scaleY);
     document.body.style.transform = 'scale(' + scale + ')';
     document.body.style.transformOrigin = 'top left';
-    // center horizontally if there's extra space
     var offsetX = (window.innerWidth - 1920 * scale) / 2;
     document.body.style.marginLeft = offsetX + 'px';
   }
